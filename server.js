@@ -51,6 +51,20 @@ app.get("/api/waitlist", function(request, response){
     return response.json(waitList);
 });
 
+app.post("/api/tables", function(request, response){
+    var newReservation = request.body;
+
+    if(reservations.length <= 5){
+        reservations.push(newReservation);
+        response.json(true);
+    }
+    else{
+        waitList.push(newReservation);
+        response.json(false);
+    }
+    
+});
+
 
 //Start server to begin listening
 app.listen(PORT, function(){
