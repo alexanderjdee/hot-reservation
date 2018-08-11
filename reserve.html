@@ -90,6 +90,30 @@
             </div>
         </div>
 
-</body>
+        <script type="text/javascript">
+        $(".submit").on("click", function(event){
+            event.preventDefault();
+            var newReservation = {
+                name: $("#reserve_name").val().trim(),
+                phoneNumber: $("#reserve_phone").val().trim(),
+                email: $("#reserve_email").val().trim(),
+                customerId: $("#reserve_uniqueID").val().trim()
+            };
+            $.post("/api/tables", newReservation)
+            .then (function (data) {
+                console.log("reserve.html", data);
+                alert("Adding table reservation");
+            });
+        });
+        
+        
+        
+        </script>
 
+
+
+
+
+
+</body>
 </html>
