@@ -17,7 +17,7 @@ var reservations = [
         name: "Test guest",
         phoneNumber: "111-111-1111",
         email: "test@gmail.com",
-        id: 1
+        customerId: "1"
     }
 ];
 
@@ -26,7 +26,7 @@ var waitList = [
         name: "Test wait",
         phoneNumber: "111-111-1111",
         email: "wait@gmail.com",
-        id: 2
+        customerId: "wait id"
     }
 ];
 
