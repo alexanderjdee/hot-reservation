@@ -32,8 +32,7 @@ var waitList = [
 
 //Routes
 app.get("/", function(request, response){
-    response.send("This is the home page");
-    //response.sendFile(path.join(__dirname, "home.html"));
+    response.sendFile(path.join(__dirname, "home.html"));
 });
 
 app.get("/tables", function(request, response){
@@ -46,6 +45,10 @@ app.get("/reserve", function(request, response){
 
 app.get("/api/tables", function(request, response){
     return response.json(reservations);
+});
+
+app.get("/api/waitlist", function(request, response){
+    return response.json(waitList);
 });
 
 
