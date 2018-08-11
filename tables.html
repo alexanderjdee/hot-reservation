@@ -8,11 +8,6 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-<<<<<<< HEAD
-
-</head>
-
-=======
     <link rel="stylesheet" type="text/css" href="./style.css">
 
     <!-- PAGE STYLING -->
@@ -20,6 +15,7 @@
         body {
             background: black;
         }
+
         .jumbotron {
             text-align: center;
             width: auto;
@@ -28,7 +24,6 @@
 
 </head>
 
->>>>>>> 8ba13e5a76b062891813316f38f3607d91a35016
 
 <body>
 
@@ -86,7 +81,6 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
 
 
 
@@ -104,7 +98,7 @@
                     .done(function (tableData) {
                         console.log("URL: " + currentURL + "/api/tables");
                         console.log(tableData);
-                        
+
                         for (var i = 0; i < tableData.length; i++) {
 
 
@@ -129,11 +123,11 @@
                 $.ajax({ url: currentURL + "/api/waitlist", method: "GET" })
                     .done(function (waitlistData) {
 
-                        
+
                         for (var i = 0; i < waitlistData.length; i++) {
 
                             // add table content for reserved
-                        
+
                             var waitlistSection = $("<div>");
                             waitlistSection.addClass('well');
                             waitlistSection.attr('id', 'waitlistWell-' + i + 1)
@@ -159,27 +153,26 @@
                 alert("Clearing...");
                 clearTable();
 
-               //refresh
+                //refresh
                 location.reload();
             })
 
 
-        
+
             runTableQuery();
             runWaitListQuery();
 
 
         </script>
 
-</body>
-=======
+
         <footer>
             <a href="/api/tables">API Table Link</a> |
             <a href="/api/waitlist">API Wait List</a>
         </footer>
 
-        
 
-    </body>      
-    </html>  
->>>>>>> 8ba13e5a76b062891813316f38f3607d91a35016
+
+</body>
+
+</html>
