@@ -85,16 +85,18 @@
 
 
 
+
         <script type="text/javascript">
-
-
             function runTableQuery() {
 
 
                 var currentURL = window.location.origin;
 
 
-                $.ajax({ url: currentURL + "/api/tables", method: "GET" })
+                $.ajax({
+                        url: currentURL + "/api/tables",
+                        method: "GET"
+                    })
                     .done(function (tableData) {
                         console.log("URL: " + currentURL + "/api/tables");
                         console.log(tableData);
@@ -111,7 +113,8 @@
 
 
 
-                            $("#tableWell-" + i + 1).append('<h2><span class="label label-primary">' + tableNumber + "</span> | " + tableData[i].customerID + "</h2>");
+                            $("#tableWell-" + i + 1).append('<h2><span class="label label-primary">' + tableNumber +
+                                "</span> | " + tableData[i].customerID + "</h2>");
                         }
                     });
             }
@@ -120,7 +123,10 @@
 
                 var currentURL = window.location.origin;
 
-                $.ajax({ url: currentURL + "/api/waitlist", method: "GET" })
+                $.ajax({
+                        url: currentURL + "/api/waitlist",
+                        method: "GET"
+                    })
                     .done(function (waitlistData) {
 
 
@@ -136,7 +142,8 @@
                             var tableNumber = i + 1;
 
                             // display remaining field in html
-                            $("#waitlistWell-" + i + 1).append('<h2><span class="label label-primary">' + tableNumber + "</span> | " + waitlistData[i].customerID + "</h2>");
+                            $("#waitlistWell-" + i + 1).append('<h2><span class="label label-primary">' +
+                                tableNumber + "</span> | " + waitlistData[i].customerID + "</h2>");
                         }
                     });
             }
@@ -145,7 +152,10 @@
             function clearTable() {
 
                 var currentURL = window.location.origin;
-                $.ajax({ url: currentURL + "/api/clear", method: "POST" })
+                $.ajax({
+                    url: currentURL + "/api/clear",
+                    method: "POST"
+                })
 
             }
 
@@ -161,10 +171,9 @@
 
             runTableQuery();
             runWaitListQuery();
-
-
         </script>
 
+<<<<<<< Updated upstream
 
         <footer>
             <a href="/api/tables">API Table Link</a> |
@@ -175,4 +184,17 @@
 
 </body>
 
+=======
+</body>
+
+<footer>
+    <a href="/api/tables">API Table Link</a> |
+    <a href="/api/waitlist">API Wait List</a>
+</footer>
+
+
+
+</body>
+
+>>>>>>> Stashed changes
 </html>
