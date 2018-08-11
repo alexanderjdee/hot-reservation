@@ -1,0 +1,32 @@
+{
+  "name": "hot-restaurant",
+  "version": "1.0.0",
+  "description": "A Node / Express based web applications for handling reservation requests.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderjdee/hot-reservation.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "bootstrap",
+    "reservation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderjdee/hot-reservation/issues"
+  },
+  "homepage": "https://github.com/alexanderjdee/hot-reservation#readme"
+}
